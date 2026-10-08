@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Inventory Management Platform</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><h1>Inventory Management Platform</h1><p>Manage products, stock and inventory efficiently</p></div></header>
+<main>
+<section class="stats"><div class="stat"><span>Total Products</span><b id="totalProducts">0</b></div><div class="stat"><span>Total Stock</span><b id="totalStock">0</b></div><div class="stat"><span>Low Stock</span><b id="lowStock">0</b></div><div class="stat"><span>Inventory Value</span><b id="inventoryValue">₹0</b></div></section>
+<section class="panel">
+<div class="toolbar"><input id="search" placeholder="Search product or category..."><select id="filter"><option value="all">All Categories</option><option>Electronics</option><option>Stationery</option><option>Grocery</option><option>Clothing</option></select><button onclick="openForm()">+ Add Product</button></div>
+<div class="tableWrap"><table><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Quantity</th><th>Status</th><th>Action</th></tr></thead><tbody id="productTable"></tbody></table></div>
+</section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalBox"><button class="close" onclick="closeForm()">×</button><h2 id="formTitle">Add Product</h2><form id="productForm"><input type="hidden" id="editId"><label>Product Name<input id="name" required></label><label>Category<select id="category" required><option value="">Select category</option><option>Electronics</option><option>Stationery</option><option>Grocery</option><option>Clothing</option></select></label><label>Price<input id="price" type="number" min="0" step="0.01" required></label><label>Quantity<input id="quantity" type="number" min="0" required></label><button type="submit">Save Product</button></form></div></div>
+<footer>Inventory Management Platform | Student Project</footer><script src="script.js"></script>
+</body></html>
